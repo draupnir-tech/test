@@ -29,10 +29,6 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
       
-      - name: Echo branch name
-        env:
-          GITHUB_REF: ${{ toJson(job) }}
-        run: echo ${ GITHUB_REF } this is working
         
       - run: echo arrow ${{ github.head_ref }}
       - run: echo meow $github.head_ref
