@@ -30,6 +30,8 @@ jobs:
         run: echo Hello, world!
       
       - name: Echo branch name
+        env:
+          GITHUB_REF: ${{ toJson(job) }}
         run: echo ${GITHUB_REF##*/} this is working
 
       # Runs a set of commands using the runners shell
