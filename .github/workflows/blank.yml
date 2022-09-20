@@ -40,11 +40,5 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
       - name: Useful default vars
-        run: |
-          There are many environment variables available by default. Here are a few, see a full list here.
-
-          echo "Workflow name:  $GITHUB_WORKFLOW"
-          echo "Workspace:      $GITHUB_WORKSPACE"
-          echo "Event:          $GITHUB_EVENT_NAME"
-          echo "SHA:            $GITHUB_SHA"
-          echo "Ref:            $GITHUB_REF" 
+        run: echo "Workspace     $GITHUB_WORKSPACE"
+ 
