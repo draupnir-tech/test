@@ -35,7 +35,7 @@ jobs:
         
       - name: ok
         if: github.ref_name == 'main'
-        run: echo ${{environment}}
+        run: echo ${{github.rev_name}}
         
       
      
