@@ -37,7 +37,7 @@ jobs:
         
       - name: ok
         if: github.ref_name == 'main'
-        run: echo ${{github.ref_name}}
+        run: echo ${{github.ref_name}} ${{env.AWS_ENV}}
         
       - name: ok ok
         if: github.ref_name == 'fun'
