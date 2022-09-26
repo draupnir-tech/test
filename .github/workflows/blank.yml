@@ -19,6 +19,7 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    environment: ${{ (github.ref_name == 'master' && 'production') || 'staging' }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -31,6 +32,10 @@ jobs:
       - name: oh yeah
         if: github.ref == 'refs/heads/main'
         run: echo is this github.ref == 'refs/heads/main'
+        
+      - name: ok
+        if: github.ref_name == 'main'
+        
       
      
         
