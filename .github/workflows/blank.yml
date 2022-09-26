@@ -35,6 +35,7 @@ jobs:
         
       - name: ok
         if: github.ref_name == 'main'
+        run: echo $environment
         
       
      
