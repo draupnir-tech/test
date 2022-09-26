@@ -31,11 +31,11 @@ jobs:
       
       - name: oh yeah
         if: github.ref == 'refs/heads/main'
-        run: echo is this github.ref == 'refs/heads/main'
+        run: echo is this ${{github.ref == 'refs/heads/main'}}
         
       - name: ok
         if: github.ref_name == 'main'
-        run: echo $environment
+        run: echo ${{environment}}
         
       
      
